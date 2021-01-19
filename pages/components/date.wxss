@@ -1,0 +1,144 @@
+.mask {
+  background-color: #929292;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  height: 868rpx;
+  background: #eeeeee;
+  border-radius: 16rpx 16rpx 0rpx 0rpx;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  font-size: 28rpx;
+}
+.header {
+  margin: 32rpx 0;
+}
+
+.title {
+  width: 570rpx;
+  height: 80rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  display: flex;
+  margin-top: 50rpx;
+}
+.title button {
+  width: 33.3%;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 16rpx;
+}
+.blue {
+  background-color: #4267F6;
+  color: #fff;
+}
+.white {
+  background-color: #FFFFFF;
+}
+
+.year {
+  display: flex;
+  height: 140rpx;
+  align-items: center;
+}
+
+.icon-button {
+  height: 100%;
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  width: 32rpx;
+  height: 32rpx;
+  padding-top: 3rpx;
+}
+/* 按月选择 */
+.month-container {
+  width: 690rpx;
+  align-content: space-around;
+  height: 400rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list-item {
+  width: 160rpx;
+  height: 108rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected {
+  background-color: #4267F6;
+  color: #fff;
+}
+/* 按日选择 */
+.day-container {
+  width: 690rpx;
+  height: 390rpx;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rpx;
+}
+.day-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14%;
+  text-align: center;
+  line-height: 48rpx;
+  height: 75rpx;
+}
+.day-bg {
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: #fff;
+  background: #4267f6;
+  border-radius: 50%;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 80rpx;
+  display: flex;
+  margin-top: 32rpx;
+}
+
+.back {
+  width: 240rpx;
+  height: 80rpx;
+  line-height: 76rpx;
+  border: 4rpx solid #4267f6;
+  border-radius: 8rpx;
+}
+.confirm {
+  width: 240rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #4267f6;
+  border-radius: 8rpx;
+  margin-left: 32rpx;
+  color: #fff;
+}

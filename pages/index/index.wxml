@@ -1,0 +1,5 @@
+<date id="date" prop-a="{{selected}}" bindchange="changeDate"></date>
+
+<button class="date-button" bindtap="showModal">选择日期</button>
+<view>当前选择: </view>
+<view>{{selectedDate}}</view>

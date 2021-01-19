@@ -1,0 +1,37 @@
+<!--pages/popup/date.wxml-->
+<view class="mask" wx:if="{{showModal}}" catchtouchmove="preventTouchMove"></view>
+
+<view class="container" wx:if="{{showModal}}">
+  <!-- <view class="header">选择日期</view> -->
+  <view class="title">
+    <button class="{{chooseWay == 'month' || chooseWay == 'year'? 'blue':'white'}}" bindtap="month">按年/月</button>
+    <button class="{{chooseWay == 'week'? 'blue':'white'}}" bindtap="week">按周</button>
+    <button class="{{chooseWay == 'day'? 'blue':'white'}}" bindtap="day">按日</button>
+  </view>
+  <!-- 年份月份选择 -->
+  <view class="year">
+    <view bindtap="backward" class="icon-button">
+      <image class="icon" src="./backward.png" ></image>
+    </view>
+    <view wx:if="{{chooseWay == 'month' || chooseWay == 'year'}}">{{currentYear+'年'}} </view>
+    <view wx:if="{{chooseWay == 'day' || chooseWay == 'week'}}">{{currentYear+'年'}} {{currentMonth+'月'}} </view>
+    <view bindtap="forward" class="icon-button" style="padding-left: -8rpx">
+      <image class="icon" src="./forward.png" ></image>
+    </view>
+  </view>
+  <!-- 按月 -->
+  <view class="month-container" wx:if="{{chooseWay == 'month' || chooseWay == 'year'}}">
+    <button class="list-item {{isSelected[index]? 'selected':'list-item'}}" bindtap="selectMonth" data-item="{{item}}" wx:for="{{months}}" >{{item+'月'}}</button>
+  </view>
+  <!-- 按天 -->
+  <view class="day-container" wx:if="{{chooseWay == 'day'||chooseWay == 'week'}}" >
+    <view class="day-item" wx:for="{{days}}" bindtap="selectDay" data-index="{{index}}" data-item="{{item}}">
+      <view class="{{isSelected[index]? 'day-bg' : 'day-item'}}">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="back" bindtap="back">返回</button>
+    <button class="confirm" bindtap="confirm">确认</button>
+  </view>
+</view>
